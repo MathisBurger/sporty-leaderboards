@@ -16,7 +16,7 @@ struct Response {
 
 
 
-pub async fn response(info: web::Query<RegisterRequest>) -> impl Responder {
+pub async fn response(info: web::Json<RegisterRequest>) -> impl Responder {
     let db = DatabaseService::new().await;
     let status = db.register(&info.0).await;
     db.close().await;

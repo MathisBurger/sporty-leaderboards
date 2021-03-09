@@ -16,7 +16,7 @@ struct Response {
     token: String
 }
 
-pub async fn response(info: web::Query<LoginRequest>) -> impl Responder {
+pub async fn response(info: web::Json<LoginRequest>) -> impl Responder {
     let db = DatabaseService::new().await;
     let status = db.login(&info.0).await;
     db.close().await;

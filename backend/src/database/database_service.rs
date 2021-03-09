@@ -3,6 +3,7 @@ use sqlx::{mysql, Pool, MySql};
 use crate::database::installation::create_tables::{create_user_accounts_table};
 use crate::controller::register_controller::RegisterRequest;
 use crate::database::actions;
+use crate::controller::login_controller::LoginRequest;
 
 pub struct DatabaseService {
     connection_string: String,
@@ -31,5 +32,9 @@ impl DatabaseService {
 
     pub async fn register(&self, req: &RegisterRequest) -> bool {
         return actions::register::register_user(self, req).await;
+    }
+
+    pub async fn login(&self, req: &LoginRequest) -> (bool, String) {
+        return actions::login::login(self, req).await;
     }
 }

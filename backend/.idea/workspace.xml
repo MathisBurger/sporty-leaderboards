@@ -12,13 +12,17 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="switching back to mysql">
-      <change afterPath="$PROJECT_DIR$/src/controller/get_public_key_controller.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rsa_utils.rs" afterDir="false" />
+    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="e2e encryption is not required">
+      <change afterPath="$PROJECT_DIR$/src/controller/register_controller.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/actions/mod.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/actions/register.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hashing.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/database_service.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/database_service.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/installation/create_tables.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/installation/create_tables.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/mod.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +122,7 @@
       <workItem from="1615144671406" duration="1165000" />
       <workItem from="1615196019139" duration="3000" />
       <workItem from="1615233189879" duration="10000" />
-      <workItem from="1615271502477" duration="1445000" />
+      <workItem from="1615271502477" duration="3116000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1614882898460</created>
@@ -141,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615272073995</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="e2e encryption is not required">
+      <created>1615273084295</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1615273084295</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +177,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value=" initialized table creation of key_pairs table" />
     <MESSAGE value="switching back to mysql" />
-    <option name="LAST_COMMIT_MESSAGE" value="switching back to mysql" />
+    <MESSAGE value="e2e encryption is not required" />
+    <option name="LAST_COMMIT_MESSAGE" value="e2e encryption is not required" />
   </component>
 </project>

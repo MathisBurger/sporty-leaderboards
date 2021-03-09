@@ -1,7 +1,8 @@
 use crate::dotenv_handler;
 use sqlx::{mysql, Pool, MySql};
-use crate::database::installation::create_tables::{create_keys_table, create_user_accounts_table};
-
+use crate::database::installation::create_tables::{create_user_accounts_table};
+use crate::controller::register_controller::RegisterRequest;
+use crate::database::actions;
 
 pub struct DatabaseService {
     connection_string: String,
@@ -26,5 +27,9 @@ impl DatabaseService {
         let mut counter: i8 = 0;
         if create_user_accounts_table(self).await {counter += 1;}
         return counter == 1;
+    }
+
+    pub async fn register(&self, req: &RegisterRequest) -> bool {
+        return actions::register::register_user(self, req).await;
     }
 }

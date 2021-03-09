@@ -12,19 +12,14 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="added register endpoint">
-      <change afterPath="$PROJECT_DIR$/src/controller/login_controller.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/actions/login.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/models/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/models/user_model.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/token.rs" afterDir="false" />
+    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="added login endpoint">
+      <change afterPath="$PROJECT_DIR$/../frontend-web/src/routes/login/Login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend-web/src/routes/login/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/actions/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/actions/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/actions/register.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/actions/register.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/database_service.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/database_service.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-web/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-web/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-web/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,9 +69,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
@@ -124,7 +119,7 @@
       <workItem from="1615196019139" duration="3000" />
       <workItem from="1615233189879" duration="10000" />
       <workItem from="1615271502477" duration="3340000" />
-      <workItem from="1615277434650" duration="2904000" />
+      <workItem from="1615277434650" duration="3522000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1614882898460</created>
@@ -161,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615274722216</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added login endpoint">
+      <created>1615281044213</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1615281044213</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +190,7 @@
     <MESSAGE value="switching back to mysql" />
     <MESSAGE value="e2e encryption is not required" />
     <MESSAGE value="added register endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="added register endpoint" />
+    <MESSAGE value="added login endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="added login endpoint" />
   </component>
 </project>

@@ -1,11 +1,11 @@
 use crate::dotenv_handler;
-use sqlx::{PgPool, postgres, Pool, Postgres};
+use sqlx::{mysql, Pool, MySql};
 use crate::database::installation::create_tables::{create_keys_table, create_user_accounts_table};
 
 
 pub struct DatabaseService {
     connection_string: String,
-    pub conn: Pool<Postgres>
+    pub conn: Pool<MySql>
 }
 
 impl DatabaseService {
@@ -13,7 +13,7 @@ impl DatabaseService {
     pub async fn new() -> DatabaseService {
         return DatabaseService {
             connection_string: dotenv_handler::load_param("DATABASE_URL"),
-            conn: postgres::PgPool::connect(&dotenv_handler::load_param("DATABASE_URL"))
+            conn: mysql::MySqlPool::connect(&dotenv_handler::load_param("DATABASE_URL"))
                 .await.expect("Cannot connect to database")
         };
     }

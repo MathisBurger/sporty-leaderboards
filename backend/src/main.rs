@@ -6,6 +6,7 @@ use actix_cors::Cors;
 mod controller;
 mod dotenv_handler;
 mod database;
+mod rsa_utils;
 
 // main function for webserver
 #[actix_web::main]

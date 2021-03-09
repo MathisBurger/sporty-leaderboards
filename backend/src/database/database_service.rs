@@ -24,8 +24,7 @@ impl DatabaseService {
 
     pub async fn install(&self) -> bool {
         let mut counter: i8 = 0;
-        if create_keys_table(self).await {counter += 1;}
         if create_user_accounts_table(self).await {counter += 1;}
-        return counter == 2;
+        return counter == 1;
     }
 }

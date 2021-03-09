@@ -16,3 +16,4 @@ sqlx = { version = "0.4", features = ["chrono", "macros", "migrate", "offline", 
 rand = "0.8.3"
 dotenv = "0.15.0"
 pwhash = "1.0.0"
+rsa = "0.3.0"

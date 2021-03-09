@@ -1,6 +1,7 @@
 use dotenv::dotenv;
 use actix_web::{HttpServer, App, web, http};
 use actix_cors::Cors;
+use actix_web::middleware::Logger;
 
 
 mod controller;
@@ -24,7 +25,9 @@ async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         App::new()
             .wrap(Cors::new().supports_credentials().finish())
+            .wrap(Logger::default())
             .route("/", web::get().to(controller::default_controller::response))
+            .route("/greeting", web::post().to(controller::greeting_controller::response))
             .route("/register", web::post().to(controller::register_controller::response))
             .route("/login", web::post().to(controller::login_controller::response))
     })

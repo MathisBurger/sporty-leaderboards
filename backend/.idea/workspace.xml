@@ -12,10 +12,12 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="added login endpoint">
+    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="Improved backend">
+      <change afterPath="$PROJECT_DIR$/src/controller/greeting_controller.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/login_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/login_controller.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/register_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/register_controller.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend-web/src/routes/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/routes/login/Login.js" afterDir="false" />
     </list>
@@ -118,7 +120,7 @@
       <workItem from="1615233189879" duration="10000" />
       <workItem from="1615271502477" duration="3340000" />
       <workItem from="1615277434650" duration="3522000" />
-      <workItem from="1615313495042" duration="2923000" />
+      <workItem from="1615313495042" duration="4338000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1614882898460</created>
@@ -162,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615281044213</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Improved backend">
+      <created>1615319956871</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1615319956871</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +199,7 @@
     <MESSAGE value="e2e encryption is not required" />
     <MESSAGE value="added register endpoint" />
     <MESSAGE value="added login endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="added login endpoint" />
+    <MESSAGE value="Improved backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved backend" />
   </component>
 </project>

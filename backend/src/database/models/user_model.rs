@@ -7,7 +7,7 @@ pub struct UserModel {
     pub password: String,
     pub web_token: String,
     pub mobile_token: String,
-    pub status: i8,
+    pub status: i16,
     pub created_at: i64
 }
 
@@ -15,6 +15,6 @@ pub struct UserModel {
 pub struct OutputUserModel {
     pub id: u64,
     pub username: String,
-    pub status: i8,
+    pub status: i16,
     pub created_at: i64
 }

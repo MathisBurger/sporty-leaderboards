@@ -59,7 +59,8 @@ export class LoginWindow extends React.Component {
             let data = JSON.parse(xhr.responseText);
             if (data.status === true) {
                 let d = new Date();
-                d.setTime(d.getTime() + (48*3600*1000))
+                d.setTime(d.getTime() + (48*3600*1000));
+                cookie.save("username", this.state.username, {path: "/", expires: d});
                 cookie.save("token", data.token, {path: "/", expires: d});
                 this.props.history.push('/dashboard');
             } else {

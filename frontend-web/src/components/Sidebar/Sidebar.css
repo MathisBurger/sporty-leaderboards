@@ -67,6 +67,7 @@
 
 .sidebar-element:hover {
     box-shadow: 8px 8px 32px rgba(0,0,0,0.6);
+    transform: scale(1.08);
 }
 
 .icon {

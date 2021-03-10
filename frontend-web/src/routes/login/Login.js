@@ -1,7 +1,10 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import {Link} from "react-router-dom";
 import './Login.css';
 import cookie from 'react-cookies';
+import {getXHRConnection} from "../../utils/XHR";
+import {Snackbar} from "../../components/Snackbar/Snackbar";
 
 export class LoginWindow extends React.Component {
 
@@ -46,20 +49,12 @@ export class LoginWindow extends React.Component {
     }
 
     login = () => {
-
         const json = JSON.stringify({
             username: this.state.username,
             password: this.state.password,
             login_device: "web"
         });
-
-        var xhr = new XMLHttpRequest();
-
-        xhr.open('POST', 'http://127.0.0.1:8080/login');
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.setRequestHeader('Accept', 'application/json');
-        xhr.send(json);
-
+        let xhr = getXHRConnection('POST', '/login', json);
         xhr.addEventListener('load', () => {
             let data = JSON.parse(xhr.responseText);
             if (data.status === true) {
@@ -68,7 +63,7 @@ export class LoginWindow extends React.Component {
                 cookie.save("token", data.token, {path: "/", expires: d});
                 this.props.history.push('dashboard');
             } else {
-                alert(data.message);
+                ReactDOM.render(<Snackbar message={data.message} color="#CB1212"/>, document.getElementById('snackbar'));
             }
         })
     }

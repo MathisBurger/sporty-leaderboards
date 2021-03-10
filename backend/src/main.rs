@@ -30,6 +30,7 @@ async fn main() -> std::io::Result<()> {
             .route("/greeting", web::post().to(controller::greeting_controller::response))
             .route("/register", web::post().to(controller::register_controller::response))
             .route("/login", web::post().to(controller::login_controller::response))
+            .route("/check_creds", web::get().to(controller::check_creds_controller::response))
             .route("/get_all_disabled_user", web::get().to(controller::get_all_disabled_user_controller::response))
     })
         .bind("0.0.0.0:".to_owned() + &dotenv_handler::load_param("APPLICATION_PORT"))?

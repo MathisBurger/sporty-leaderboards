@@ -54,7 +54,7 @@ export class LoginWindow extends React.Component {
             password: this.state.password,
             login_device: "web"
         });
-        let xhr = getXHRConnection('POST', '/login', json);
+        let xhr = getXHRConnection('POST', '/login', json, 'application/json');
         xhr.addEventListener('load', () => {
             let data = JSON.parse(xhr.responseText);
             if (data.status === true) {

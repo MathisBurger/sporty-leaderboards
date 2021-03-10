@@ -55,7 +55,7 @@ export class RegisterWindow extends React.Component {
             password: this.state.password
         });
 
-        let xhr = getXHRConnection('POST', '/register', json);
+        let xhr = getXHRConnection('POST', '/register', json, 'application/json');
         xhr.addEventListener('load', () => {
             const data = JSON.parse(xhr.responseText);
             if (data.status) {

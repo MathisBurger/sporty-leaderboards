@@ -61,7 +61,7 @@ export class LoginWindow extends React.Component {
                 let d = new Date();
                 d.setTime(d.getTime() + (48*3600*1000))
                 cookie.save("token", data.token, {path: "/", expires: d});
-                this.props.history.push('dashboard');
+                this.props.history.push('/dashboard');
             } else {
                 ReactDOM.render(<Snackbar render={true} message={data.message} color={"#CB1212"}/>, document.getElementById('snackbar'));
                 setTimeout(() => {

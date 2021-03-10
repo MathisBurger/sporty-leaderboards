@@ -12,7 +12,10 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="added get_all_disabled_user_controller.rs endpoint" />
+    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="added get_all_disabled_user_controller.rs endpoint">
+      <change beforePath="$PROJECT_DIR$/../frontend-web/src/components/Sidebar/Sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/components/Sidebar/Sidebar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-web/src/routes/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/routes/login/Login.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,7 +119,7 @@
       <workItem from="1615357512906" duration="193000" />
       <workItem from="1615357718690" duration="1153000" />
       <workItem from="1615359630190" duration="284000" />
-      <workItem from="1615360030540" duration="4283000" />
+      <workItem from="1615360030540" duration="4851000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1614882898460</created>

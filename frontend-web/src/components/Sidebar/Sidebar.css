@@ -58,7 +58,7 @@
 .sidebar-element {
     width: 6em;
     height: 6em;
-    margin: 0.5em;
+    margin: 0.5em 0.5em 0.5em 0.5em;
     background: #1A1A1A;
     border-radius: 15px;
     box-shadow: 8px 8px 8px rgba(0,0,0,0.2);
@@ -74,4 +74,34 @@
     min-width: 3em;
     min-height: 3em;
     margin: 1.5em 1.5em 1.5em 1.5em;
+}
+
+@media only screen and (max-width: 800px) {
+    .sidebar {
+        width: 5.5em;
+        max-width: 5.5em;
+        min-width: 5.5em;
+
+    }
+    .sidebar-logo-header {
+        width: 5.5em;
+        height: 5.5em;
+        transition: none;
+    }
+    .sidebar-link-container {
+        min-width: 5.5em;
+    }
+    .sidebar-logo-img {
+        width: 5.5em;
+        height: 5.5em;
+    }
+    .sidebar-element {
+        width: 4em;
+        height: 4em;
+        margin: 0.75em 0.75em 0.75em 0.75em;
+    }
+    .icon {
+        margin: 0.5em 0.5em 0.5em 0.5em;
+        transition: none;
+    }
 }

@@ -54,4 +54,8 @@ impl DatabaseService {
     pub async fn get_all_accepted_user(&self) -> Vec<OutputUserModel> {
         return actions::get_all_user_with_status::get_all_user_with_status(self, &1).await;
     }
+
+    pub async fn update_user_status(&self, username: &String, status: i16) {
+        actions::update_user_status::update_user_status(self, username, &status).await;
+    }
 }

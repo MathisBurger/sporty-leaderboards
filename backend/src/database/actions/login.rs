@@ -8,7 +8,7 @@ use crate::token;
 pub async fn login(service: &DatabaseService, req: &LoginRequest) -> (bool, String) {
 
     let elements: Vec<user_model::UserModel> = query_as!(user_model::UserModel, "SELECT * FROM `user_accounts` WHERE `username`=? AND `status`='1';",
-        &req.username, hashed_pwd
+        &req.username
     ).fetch_all(&service.conn).await.unwrap();
     if elements.len() == 1 {
         if pwhash::sha512_crypt::verify(&req.password, &elements[0].password) {
@@ -20,10 +20,10 @@ pub async fn login(service: &DatabaseService, req: &LoginRequest) -> (bool, Stri
                 query!("UPDATE `user_accounts` SET `mobile_token`=? WHERE `username`=?", &token, &req.username)
                     .execute(&service.conn).await;
             }
+            return (true, token);
         } else {
             return (false, String::new())
         }
-        return (true, token);
     } else {
         return (false, String::new());
     }

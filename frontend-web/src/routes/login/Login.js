@@ -63,7 +63,10 @@ export class LoginWindow extends React.Component {
                 cookie.save("token", data.token, {path: "/", expires: d});
                 this.props.history.push('dashboard');
             } else {
-                ReactDOM.render(<Snackbar message={data.message} color="#CB1212"/>, document.getElementById('snackbar'));
+                ReactDOM.render(<Snackbar render={true} message={data.message} color={"#CB1212"}/>, document.getElementById('snackbar'));
+                setTimeout(() => {
+                    ReactDOM.render(null, document.getElementById('snackbar'));
+                }, 1000);
             }
         })
     }

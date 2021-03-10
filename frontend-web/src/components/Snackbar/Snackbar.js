@@ -6,20 +6,16 @@ export class Snackbar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            render: true
+            render: props.render,
+            color: props.color,
+            message: props.message
         };
-        setTimeout(() => {
-            this.setState({
-                render: false
-            });
-        }, 1500);
     }
-
     render() {
         if (this.state.render) {
             return (
-                <div style={{background: this.props.color}} className="alert">
-                    {this.props.message}
+                <div style={{background: this.state.color}} className="alert">
+                    {this.state.message}
                 </div>
             );
         } else {

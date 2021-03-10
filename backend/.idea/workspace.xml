@@ -13,13 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="added greeting easteregg endpoint">
-      <change afterPath="$PROJECT_DIR$/../frontend-web/src/components/Snackbar/Snackbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend-web/src/components/Snackbar/Snackbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend-web/src/utils/XHR.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend-web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend-web/src/routes/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/routes/login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/actions/login.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/actions/login.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-web/src/routes/register/RegisterWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/routes/register/RegisterWindow.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +117,7 @@
       <workItem from="1615277434650" duration="3522000" />
       <workItem from="1615313495042" duration="5173000" />
       <workItem from="1615357512906" duration="193000" />
-      <workItem from="1615357718690" duration="600000" />
+      <workItem from="1615357718690" duration="726000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1614882898460</created>

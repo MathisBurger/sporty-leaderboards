@@ -5,3 +5,4 @@ pub mod greeting_controller;
 pub mod get_all_blocked_user_controller;
 pub mod check_creds_controller;
 pub mod get_all_unaccepted_user_controller;
+pub mod get_all_accepted_user_controller;

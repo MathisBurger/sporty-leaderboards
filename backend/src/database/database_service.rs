@@ -50,4 +50,8 @@ impl DatabaseService {
     pub async fn get_all_unaccepted_user(&self) -> Vec<OutputUserModel> {
         return actions::get_all_user_with_status::get_all_user_with_status(self, &0).await;
     }
+
+    pub async fn get_all_accepted_user(&self) -> Vec<OutputUserModel> {
+        return actions::get_all_user_with_status::get_all_user_with_status(self, &1).await;
+    }
 }

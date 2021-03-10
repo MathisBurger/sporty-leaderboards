@@ -43,7 +43,11 @@ impl DatabaseService {
         return actions::check_token_login::check_token_login(self, username, token, device).await;
     }
 
-    pub async fn get_all_disabled_user(&self) -> Vec<OutputUserModel> {
-        return actions::get_all_disabled_user::get_all_disabled_user(self).await;
+    pub async fn get_all_blocked_user(&self) -> Vec<OutputUserModel> {
+        return actions::get_all_user_with_status::get_all_user_with_status(self, &2).await;
+    }
+
+    pub async fn get_all_unaccepted_user(&self) -> Vec<OutputUserModel> {
+        return actions::get_all_user_with_status::get_all_user_with_status(self, &0).await;
     }
 }

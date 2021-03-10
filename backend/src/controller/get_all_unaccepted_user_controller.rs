@@ -2,25 +2,12 @@ use actix_web::{web, Responder, HttpRequest};
 use serde::{Serialize, Deserialize};
 use crate::database::database_service::DatabaseService;
 use crate::database::models::user_model::OutputUserModel;
-
-#[derive(Deserialize)]
-pub struct Request {
-    username: String,
-    token: String,
-    device: String
-}
-
-#[derive(Serialize)]
-struct Response {
-    status: bool,
-    message: String,
-    user: Vec<OutputUserModel>
-}
+use crate::controller::get_all_blocked_user_controller::{Request, Response};
 
 pub async fn response(req: web::Query<Request>) -> impl Responder {
     let db = DatabaseService::new().await;
     if db.check_token_login(&req.username, &req.token, &req.device).await {
-        let user = db.get_all_disabled_user().await;
+        let user = db.get_all_unaccepted_user().await;
         db.close().await;
         web::HttpResponse::Ok()
             .json(Response {

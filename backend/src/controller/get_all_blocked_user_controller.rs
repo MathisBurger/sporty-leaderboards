@@ -25,7 +25,7 @@ pub async fn response(req: web::Query<Request>) -> impl Responder {
         web::HttpResponse::Ok()
             .json(Response {
                 status: true,
-                message: "Successfully queried all disabled user".to_string(),
+                message: "Successfully queried all unaccepted user".to_string(),
                 user
             })
     } else {

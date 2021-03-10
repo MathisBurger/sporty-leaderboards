@@ -37,7 +37,7 @@ export class RegisterWindow extends React.Component {
                     <div className="card-body">
                         <h1>Register</h1>
                         <input type="text" placeholder="username" onChange={this.handleUsername}/>
-                        <input type="text" placeholder="password" onChange={this.handlePassword}/>
+                        <input type="password" placeholder="password" onChange={this.handlePassword}/>
                         <button onClick={this.register}>Register</button>
                         <Link to="/login">
                             <h3>login</h3>
@@ -59,7 +59,7 @@ export class RegisterWindow extends React.Component {
         xhr.addEventListener('load', () => {
             const data = JSON.parse(xhr.responseText);
             if (data.status) {
-                this.props.history.push('dashboard');
+                this.props.history.push('login');
             } else {
                 console.log('break the rules');
                 ReactDOM.render(<Snackbar render={true} message={data.message} color={"#CB1212"}/>, document.getElementById('snackbar'));

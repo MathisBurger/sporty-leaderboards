@@ -6,7 +6,6 @@ use crate::database::models::user_model;
 use crate::token;
 
 pub async fn login(service: &DatabaseService, req: &LoginRequest) -> (bool, String) {
-
     let elements: Vec<user_model::UserModel> = query_as!(user_model::UserModel, "SELECT * FROM `user_accounts` WHERE `username`=? AND `status`='1';",
         &req.username
     ).fetch_all(&service.conn).await.unwrap();

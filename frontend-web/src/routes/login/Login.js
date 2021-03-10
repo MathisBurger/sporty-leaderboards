@@ -38,7 +38,7 @@ export class LoginWindow extends React.Component {
               <div className="card-body">
                   <h1>Login</h1>
                   <input type="text" placeholder="username" onChange={this.handleUsername}/>
-                  <input type="text" placeholder="password" onChange={this.handlePassword}/>
+                  <input type="password" placeholder="password" onChange={this.handlePassword}/>
                   <button onClick={this.login}>Login</button>
                   <Link to="/register">
                       <h3>register</h3>

@@ -4,6 +4,7 @@ use crate::database::installation::create_tables::{create_user_accounts_table};
 use crate::controller::register_controller::RegisterRequest;
 use crate::database::actions;
 use crate::controller::login_controller::LoginRequest;
+use crate::database::models::user_model::OutputUserModel;
 
 pub struct DatabaseService {
     connection_string: String,
@@ -36,5 +37,13 @@ impl DatabaseService {
 
     pub async fn login(&self, req: &LoginRequest) -> (bool, String) {
         return actions::login::login(self, req).await;
+    }
+
+    pub async fn check_token_login(&self, username: &String, token: &String, device: &String) -> bool {
+        return actions::check_token_login::check_token_login(self, username, token, device).await;
+    }
+
+    pub async fn get_all_disabled_user(&self) -> Vec<OutputUserModel> {
+        return actions::get_all_disabled_user::get_all_disabled_user(self).await;
     }
 }

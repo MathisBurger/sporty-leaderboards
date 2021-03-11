@@ -12,18 +12,12 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="checked connection is beeing closed">
-      <change afterPath="$PROJECT_DIR$/src/Bubblesort.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/get_leaderboard_controller.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/actions/get_all_workouts.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/models/workout_model.rs" afterDir="false" />
+    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="added get_leaderboard_controller.rs endpoint">
+      <change afterPath="$PROJECT_DIR$/src/controller/get_all_workouts_of_user_controller.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/get_leaderboard_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/get_leaderboard_controller.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/actions/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/actions/mod.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database/database_service.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/database_service.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/installation/create_tables.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/installation/create_tables.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/models/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +127,7 @@
       <workItem from="1615399092859" duration="5317000" />
       <workItem from="1615443898445" duration="3264000" />
       <workItem from="1615465606899" duration="5087000" />
-      <workItem from="1615482790623" duration="5101000" />
+      <workItem from="1615482790623" duration="5674000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1614882898460</created>
@@ -268,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615476322481</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="added get_leaderboard_controller.rs endpoint">
+      <created>1615495738391</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1615495738391</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +310,7 @@
     <MESSAGE value="added block_user_controller.rs endpoint" />
     <MESSAGE value="added add_workout_controller.rs endpoint" />
     <MESSAGE value="checked connection is beeing closed" />
-    <option name="LAST_COMMIT_MESSAGE" value="checked connection is beeing closed" />
+    <MESSAGE value="added get_leaderboard_controller.rs endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="added get_leaderboard_controller.rs endpoint" />
   </component>
 </project>

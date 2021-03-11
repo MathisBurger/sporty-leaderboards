@@ -10,3 +10,4 @@ pub mod accept_user_controller;
 pub mod block_user_controller;
 pub mod add_workout_controller;
 pub mod get_leaderboard_controller;
+pub mod get_all_workouts_of_user_controller;

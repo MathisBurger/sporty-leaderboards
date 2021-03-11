@@ -39,6 +39,7 @@ async fn main() -> std::io::Result<()> {
             .route("/block_user", web::patch().to(controller::block_user_controller::response))
             .route("/add_workout", web::post().to(controller::add_workout_controller::response))
             .route("/get_leaderboard", web::get().to(controller::get_leaderboard_controller::response))
+            .route("/get_all_workouts_of_user", web::get().to(controller::get_all_workouts_of_user_controller::response))
     })
         .bind("0.0.0.0:".to_owned() + &dotenv_handler::load_param("APPLICATION_PORT"))?
         .run()

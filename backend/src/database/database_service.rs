@@ -7,6 +7,7 @@ use crate::controller::login_controller::LoginRequest;
 use crate::database::models::user_model::OutputUserModel;
 use std::iter::Map;
 use std::collections::HashMap;
+use crate::database::models::workout_model::WorkoutModel;
 
 
 pub struct DatabaseService {
@@ -65,6 +66,10 @@ impl DatabaseService {
 
     pub async fn add_workout(&self, username: &String, time: &i64, distance: &i32) {
         actions::add_workout::add_workout(self, username, time, distance).await;
+    }
+
+    pub async fn get_all_workouts_of_user(&self, username: &String) -> Vec<WorkoutModel> {
+        return actions::get_all_workouts::get_all_workouts_of_user(self, username).await;
     }
 
     pub async fn get_leaderboard(&self) -> Vec<(String, f64)> {

@@ -19,7 +19,7 @@ struct Response {
 pub async fn response(req: web::Json<Request>) -> impl Responder {
     let db = DatabaseService::new().await;
     if db.check_token_login(&req.username, &req.token, &req.device).await {
-        db.update_user_status(&req.username, 1).await;
+        db.update_user_status(&req.user, 1).await;
         web::HttpResponse::Ok()
             .json(Response {
                 status: true,

@@ -1,0 +1,142 @@
+.sidebar {
+    height: 200vh;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: normal;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    align-items: center;
+}
+
+.card-user-management {
+    margin-top: 2.5%;
+    width: 100%;
+    height: 20%;
+    background: #2E2E2E;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.card-user-management:hover {
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.4);
+}
+
+.card-user-management::-webkit-scrollbar {
+    display: none;
+}
+
+p {
+    color: white;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin: 5px 0 5px 0;
+    width: 100%;
+}
+
+.card-element {
+    height: 10%;
+    color: white;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-element:hover {
+    background: #cbcbcb;
+    transform: scale(1.015);
+    box-shadow: 0 0 8px rgba(255,255,255,0.4);
+    border-radius: 20px;
+    color: #161616;
+}
+
+.card-element-text {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-left: 20%;
+}
+
+.card-element-icon {
+    width: 0.9em;
+    height: 0.9em;
+}
+
+.card-element-button {
+    border-radius: 50%;
+    height: 1.1em;
+    width: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20%;
+    margin-left: 0;
+
+}
+
+.card-element-button:hover {
+    box-shadow: 0 0 8px rgba(0,0,0,1);
+}
+
+.card-button-block {
+    background: #c31313;
+}
+
+.card-button-pardon {
+    background: #d24316;
+}
+
+.card-button-accept {
+    background: #45e30e;
+    margin-right: 0;
+}
+
+@keyframes closeCardContent {
+    0% {
+        height: 20%;
+    }
+    100% {
+        height: 2.8%;
+        overflow: hidden;
+    }
+}
+
+@keyframes openCardContent {
+    0% {
+        overflow: hidden;
+        height: 2.8%;
+    }
+    100% {
+        height: 20%;
+        overflow-y: scroll;
+        overflow-x: visible;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    h1 {
+        font-size: 2em;
+    }
+    .column {
+        margin-left: 0;
+    }
+    .card-user-management {
+        margin-bottom: 0.5em;
+    }
+}

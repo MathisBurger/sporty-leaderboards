@@ -12,7 +12,13 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="added block_user_controller.rs endpoint" />
+    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="added block_user_controller.rs endpoint">
+      <change afterPath="$PROJECT_DIR$/../frontend-web/src/routes/UserManagement/APIActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend-web/src/routes/UserManagement/RenderArrays.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend-web/src/routes/UserManagement/UserManagement.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-web/src/routes/UserManagement/UserManagement.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/routes/UserManagement/UserManagement.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +125,7 @@
       <workItem from="1615359630190" duration="284000" />
       <workItem from="1615360030540" duration="5029000" />
       <workItem from="1615399092859" duration="5317000" />
-      <workItem from="1615443898445" duration="722000" />
+      <workItem from="1615443898445" duration="2522000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1614882898460</created>

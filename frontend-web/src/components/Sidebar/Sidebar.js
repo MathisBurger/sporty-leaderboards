@@ -1,11 +1,17 @@
 import React from "react";
 import './Sidebar.css';
 import logo from '../../logo.svg';
+import cookie from 'react-cookies';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faHome, faUser} from "@fortawesome/free-solid-svg-icons";
+import {faHome, faUser, faSignOutAlt} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
 
 export class SidebarComponent extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.logout = this.logout.bind(this)
+    }
 
     render() {
         return (
@@ -24,6 +30,9 @@ export class SidebarComponent extends React.Component {
                             <FontAwesomeIcon icon={faUser} className={"icon"} />
                         </div>
                     </Link>
+                    <div className={"sidebar-element"} onClick={this.logout}>
+                        <FontAwesomeIcon icon={faSignOutAlt} className={"icon"} />
+                    </div>
                 </div>
             </div>
         );
@@ -42,4 +51,10 @@ export class SidebarComponent extends React.Component {
             container.style.animationDuration = "0.5s";
         }
     }
+
+    logout = () =>  {
+        cookie.remove('username');
+        cookie.remove('token');
+        window.location.reload();
+    };
 }

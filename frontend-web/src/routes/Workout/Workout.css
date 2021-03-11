@@ -1,0 +1,99 @@
+.workout-main-card {
+    background: #2B2B2B;
+    width: 70%;
+    height: 27%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heart-container {
+    min-width: 5em;
+    min-height: 5em;
+    color: red;
+}
+
+.btn-workout {
+    margin-top: 1.5em;
+    width: 30%;
+    height: 20%;
+    font-size: 3em;
+}
+
+@keyframes slideToRed {
+     0% {
+         background-color: #0759d6;
+     }
+    100% {
+       background-color: #c80b0b;
+    }
+}
+
+@keyframes slideToBlue {
+    0% {
+        background-color: #c80b0b;
+    }
+    100% {
+        background-color: #0759d6;
+    }
+}
+
+.button-finish-workout {
+    background-color: #2ee30e;
+    height: 20%;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.animated-heart-container {
+    animation-name: HeartBeat;
+    animation-iteration-count: infinite;
+    animation-duration: 0.3s;
+}
+
+@keyframes HeartBeat {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.modal {
+    min-width: 60vw;
+    min-height: 40vh;
+    background-color: #4e4d4d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.time-show {
+    font-size: 1.3em;
+}
+
+@media only screen and (max-width: 680px) {
+    .workout-main-card {
+        width: 100%;
+    }
+    .btn-workout {
+        min-width: 60%;
+    }
+    .modal {
+        min-width: 80%;
+        max-width: 80%;
+        margin-left: 5%;
+    }
+    input {
+        width: 85%;
+    }
+    button {
+        height: 20%;
+    }
+}
+
+
+

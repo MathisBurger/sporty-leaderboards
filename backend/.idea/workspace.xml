@@ -12,20 +12,12 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="added block_user_controller.rs endpoint">
-      <change afterPath="$PROJECT_DIR$/src/controller/add_workout_controller.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/actions/add_workout.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend-web/src/routes/Workout/Workout.js" afterDir="false" />
+    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="checked connection is beeing closed">
+      <change afterPath="$PROJECT_DIR$/../frontend-web/src/routes/Workout/Animations.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend-web/src/routes/Workout/Workout.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/actions/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/actions/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/database_service.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/database_service.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/installation/create_tables.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/installation/create_tables.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend-web/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend-web/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/components/Sidebar/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend-web/src/utils/CheckCreds.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/utils/CheckCreds.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend-web/src/utils/XHR.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/utils/XHR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-web/src/routes/Workout/Workout.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/routes/Workout/Workout.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +60,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -76,9 +68,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
@@ -134,7 +126,8 @@
       <workItem from="1615360030540" duration="5029000" />
       <workItem from="1615399092859" duration="5317000" />
       <workItem from="1615443898445" duration="3264000" />
-      <workItem from="1615465606899" duration="4698000" />
+      <workItem from="1615465606899" duration="5087000" />
+      <workItem from="1615482790623" duration="1468000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1614882898460</created>
@@ -255,7 +248,21 @@
       <option name="project" value="LOCAL" />
       <updated>1615444550905</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="added add_workout_controller.rs endpoint">
+      <created>1615476216812</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1615476216812</updated>
+    </task>
+    <task id="LOCAL-00019" summary="checked connection is beeing closed">
+      <created>1615476322481</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1615476322481</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,6 +301,8 @@
     <MESSAGE value="added accept_user_controller.rs endpoint" />
     <MESSAGE value="updated accept_user_controller.rs" />
     <MESSAGE value="added block_user_controller.rs endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="added block_user_controller.rs endpoint" />
+    <MESSAGE value="added add_workout_controller.rs endpoint" />
+    <MESSAGE value="checked connection is beeing closed" />
+    <option name="LAST_COMMIT_MESSAGE" value="checked connection is beeing closed" />
   </component>
 </project>

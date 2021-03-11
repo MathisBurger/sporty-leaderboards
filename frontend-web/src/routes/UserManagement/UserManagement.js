@@ -58,49 +58,31 @@ export class UserManagement extends React.Component {
 
         let login = checkAPICredentials();
         login.addEventListener('load', () => JSON.parse(login.responseText).status ? console.log('login verified') : this.props.history.push('/login'));
+
         let params = "?username=" + cookie.load('username') + "&token=" + cookie.load('token') + "&device=web";
+
         let accepted_user = getXHRConnection('GET', '/get_all_accepted_user' + params, null, 'application/x-www-form-urlencoded');
-        accepted_user.addEventListener('load', () => {
-            let json = JSON.parse(accepted_user.responseText);
-            if (json.status) {
-                let state = this.state;
-                state.acceptedUser = json.user;
-                this.setState(state);
-            } else {
-                ReactDOM.render(<Snackbar render={true} message={json.message} color={"#CB1212"}/>, document.getElementById('snackbar'));
-                setTimeout(() => {
-                    ReactDOM.render(null, document.getElementById('snackbar'));
-                }, 1000);
-            }
-        });
+        accepted_user.addEventListener('load', () => this.prepareDisplay(accepted_user, "acceptedUser"));
+
         let unaccepted_user = getXHRConnection('GET', '/get_all_unaccepted_user' + params, null, 'application/x-www-form-urlencoded');
-        unaccepted_user.addEventListener('load', () => {
-            let json = JSON.parse(unaccepted_user.responseText);
-            if (json.status) {
-                let state = this.state;
-                state.unacceptedUser = json.user;
-                this.setState(state);
-            } else {
-                ReactDOM.render(<Snackbar render={true} message={json.message} color={"#CB1212"}/>, document.getElementById('snackbar'));
-                setTimeout(() => {
-                    ReactDOM.render(null, document.getElementById('snackbar'));
-                }, 1000);
-            }
-        });
+        unaccepted_user.addEventListener('load', () => this.prepareDisplay(unaccepted_user, "unacceptedUser"));
+
         let blocked_user = getXHRConnection('GET', '/get_all_blocked_user' + params, null, 'application/x-www-form-urlencoded');
-        blocked_user.addEventListener('load', () => {
-            let json = JSON.parse(blocked_user.responseText);
-            if (json.status) {
-                let state = this.state;
-                state.blockedUser = json.user;
-                this.setState(state);
-            } else {
-                ReactDOM.render(<Snackbar render={true} message={json.message} color={"#CB1212"}/>, document.getElementById('snackbar'));
-                setTimeout(() => {
-                    ReactDOM.render(null, document.getElementById('snackbar'));
-                }, 1000);
-            }
-        });
+        blocked_user.addEventListener('load', () => this.prepareDisplay(blocked_user, "blockedUser"));
+    }
+
+    prepareDisplay(xhr, stateElement) {
+        let json = JSON.parse(xhr.responseText);
+        if (json.status) {
+            let state = this.state;
+            state[stateElement] = json.user;
+            this.setState(state);
+        } else {
+            ReactDOM.render(<Snackbar render={true} message={json.message} color={"#CB1212"}/>, document.getElementById('snackbar'));
+            setTimeout(() => {
+                ReactDOM.render(null, document.getElementById('snackbar'));
+            }, 1000);
+        }
     }
 
     toggleCardUser = (id, name) => {

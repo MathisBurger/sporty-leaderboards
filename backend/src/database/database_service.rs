@@ -1,6 +1,6 @@
 use crate::dotenv_handler;
 use sqlx::{mysql, Pool, MySql};
-use crate::database::installation::create_tables::{create_user_accounts_table};
+use crate::database::installation::create_tables::{create_user_accounts_table, create_workouts_table};
 use crate::controller::register_controller::RegisterRequest;
 use crate::database::actions;
 use crate::controller::login_controller::LoginRequest;
@@ -28,7 +28,8 @@ impl DatabaseService {
     pub async fn install(&self) -> bool {
         let mut counter: i8 = 0;
         if create_user_accounts_table(self).await {counter += 1;}
-        return counter == 1;
+        if create_workouts_table(self).await {counter += 1;}
+        return counter == 2;
     }
 
     pub async fn register(&self, req: &RegisterRequest) -> bool {
@@ -57,5 +58,9 @@ impl DatabaseService {
 
     pub async fn update_user_status(&self, username: &String, status: i16) {
         actions::update_user_status::update_user_status(self, username, &status).await;
+    }
+
+    pub async fn add_workout(&self, username: &String, time: &i64, distance: &i32) {
+        actions::add_workout::add_workout(self, username, time, distance).await;
     }
 }

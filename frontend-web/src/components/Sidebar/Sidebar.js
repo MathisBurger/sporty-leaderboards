@@ -3,7 +3,7 @@ import './Sidebar.css';
 import logo from '../../logo.svg';
 import cookie from 'react-cookies';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faHome, faUser, faSignOutAlt} from "@fortawesome/free-solid-svg-icons";
+import {faHome, faUser, faSignOutAlt, faRunning} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
 
 // Sidebar as component
@@ -31,6 +31,11 @@ export class SidebarComponent extends React.Component {
                     <Link to={"/user-management"}>
                         <div className={"sidebar-element"}>
                             <FontAwesomeIcon icon={faUser} className={"icon"} />
+                        </div>
+                    </Link>
+                    <Link to={"/workout"}>
+                        <div className={"sidebar-element"}>
+                            <FontAwesomeIcon icon={faRunning} className={"icon"} />
                         </div>
                     </Link>
                     <div className={"sidebar-element"} onClick={this.logout}>

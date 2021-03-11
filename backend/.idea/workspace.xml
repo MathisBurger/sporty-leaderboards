@@ -12,7 +12,21 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="added block_user_controller.rs endpoint" />
+    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="added block_user_controller.rs endpoint">
+      <change afterPath="$PROJECT_DIR$/src/controller/add_workout_controller.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/actions/add_workout.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend-web/src/routes/Workout/Workout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/actions/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/actions/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/database_service.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/database_service.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/installation/create_tables.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/installation/create_tables.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-web/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-web/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/components/Sidebar/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-web/src/utils/CheckCreds.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/utils/CheckCreds.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-web/src/utils/XHR.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/utils/XHR.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,9 +76,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
@@ -120,6 +134,7 @@
       <workItem from="1615360030540" duration="5029000" />
       <workItem from="1615399092859" duration="5317000" />
       <workItem from="1615443898445" duration="3264000" />
+      <workItem from="1615465606899" duration="4698000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1614882898460</created>

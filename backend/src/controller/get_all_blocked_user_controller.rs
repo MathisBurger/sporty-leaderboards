@@ -29,6 +29,7 @@ pub async fn response(req: web::Query<Request>) -> impl Responder {
                 user
             })
     } else {
+        db.close().await;
         web::HttpResponse::Ok()
             .json(Response {
                 status: false,

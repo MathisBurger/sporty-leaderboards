@@ -35,6 +35,7 @@ async fn main() -> std::io::Result<()> {
             .route("/get_all_unaccepted_user", web::get().to(controller::get_all_unaccepted_user_controller::response))
             .route("/get_all_accepted_user", web::get().to(controller::get_all_accepted_user_controller::response))
             .route("/accept_user", web::patch().to(controller::accept_user_controller::response))
+            .route("/block_user", web::patch().to(controller::block_user_controller::response))
     })
         .bind("0.0.0.0:".to_owned() + &dotenv_handler::load_param("APPLICATION_PORT"))?
         .run()

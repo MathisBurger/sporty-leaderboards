@@ -7,3 +7,4 @@ pub mod check_creds_controller;
 pub mod get_all_unaccepted_user_controller;
 pub mod get_all_accepted_user_controller;
 pub mod accept_user_controller;
+pub mod block_user_controller;

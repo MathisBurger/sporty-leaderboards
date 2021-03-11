@@ -10,15 +10,17 @@ import {Snackbar} from "../../components/Snackbar/Snackbar";
 
 export class UserManagement extends React.Component {
 
-    state = {
-        showAcceptedUser: true,
-        acceptedUser: [],
-        showUnacceptedUser: true,
-        unacceptedUser: [],
-        showBlockedUser: true,
-        blockedUser: []
-    };
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            showAcceptedUser: cookie.load('showAcceptedUser') !== undefined ? cookie.load('showAcceptedUser') === 'true': true,
+            acceptedUser: [],
+            showUnacceptedUser: cookie.load('showUnacceptedUser') !== undefined ? cookie.load('showUnacceptedUser') === 'true': true,
+            unacceptedUser: [],
+            showBlockedUser: cookie.load('showBlockedUser') !== undefined ? cookie.load('showBlockedUser') === 'true': true,
+            blockedUser: []
+        };
+    }
     render() {
         return (
             <div className={"row"}>
@@ -46,6 +48,14 @@ export class UserManagement extends React.Component {
     }
 
     componentDidMount() {
+        let acceptedCard = document.getElementById('accept-user-card');
+        let unacceptedCard = document.getElementById('unaccepted-user-card');
+        let blockedCard = document.getElementById('blocked-user-card');
+
+        this.state.showAcceptedUser ? acceptedCard.style.height = "20%": acceptedCard.style.height = "2.8%";
+        this.state.showUnacceptedUser ? unacceptedCard.style.height = "20%": unacceptedCard.style.height = "2.8%";
+        this.state.showBlockedUser ? blockedCard.style.height = "20%": blockedCard.style.height = "2.8%";
+
         let login = checkAPICredentials();
         login.addEventListener('load', () => JSON.parse(login.responseText).status ? console.log('login verified') : this.props.history.push('/login'));
         let params = "?username=" + cookie.load('username') + "&token=" + cookie.load('token') + "&device=web";
@@ -106,6 +116,7 @@ export class UserManagement extends React.Component {
         }
         let state = this.state;
         state[name] = !this.state[name];
+        cookie.save(name, this.state[name]);
         this.setState(state);
     };
 }

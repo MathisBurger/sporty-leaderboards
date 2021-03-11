@@ -46,7 +46,6 @@ export function renderUnacceptedUser(arr) {
 }
 
 export function renderBlockedUser(arr) {
-    console.log(arr);
     var list = [];
     for (var i=0; i<arr.length; i++) {
         let usr = arr[i].username;

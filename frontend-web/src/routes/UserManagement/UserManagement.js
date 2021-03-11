@@ -10,6 +10,7 @@ import {Snackbar} from "../../components/Snackbar/Snackbar";
 
 export class UserManagement extends React.Component {
 
+    // defines component state by cookies
     constructor(props) {
         super(props);
         this.state = {
@@ -21,6 +22,8 @@ export class UserManagement extends React.Component {
             blockedUser: []
         };
     }
+
+
     render() {
         return (
             <div className={"row"}>
@@ -47,30 +50,39 @@ export class UserManagement extends React.Component {
         );
     }
 
+    // on component load
     componentDidMount() {
+        // get all references of card elements
         let acceptedCard = document.getElementById('accept-user-card');
         let unacceptedCard = document.getElementById('unaccepted-user-card');
         let blockedCard = document.getElementById('blocked-user-card');
 
+        // resize cards based on states
         this.state.showAcceptedUser ? acceptedCard.style.height = "20%": acceptedCard.style.height = "2.8%";
         this.state.showUnacceptedUser ? unacceptedCard.style.height = "20%": unacceptedCard.style.height = "2.8%";
         this.state.showBlockedUser ? blockedCard.style.height = "20%": blockedCard.style.height = "2.8%";
 
+        // login
         let login = checkAPICredentials();
         login.addEventListener('load', () => JSON.parse(login.responseText).status ? console.log('login verified') : this.props.history.push('/login'));
 
+        // define login parameter
         let params = "?username=" + cookie.load('username') + "&token=" + cookie.load('token') + "&device=web";
 
+        // load all accepted user
         let accepted_user = getXHRConnection('GET', '/get_all_accepted_user' + params, null, 'application/x-www-form-urlencoded');
         accepted_user.addEventListener('load', () => this.prepareDisplay(accepted_user, "acceptedUser"));
 
+        // load all unaccepted user
         let unaccepted_user = getXHRConnection('GET', '/get_all_unaccepted_user' + params, null, 'application/x-www-form-urlencoded');
         unaccepted_user.addEventListener('load', () => this.prepareDisplay(unaccepted_user, "unacceptedUser"));
 
+        // load all blocked user
         let blocked_user = getXHRConnection('GET', '/get_all_blocked_user' + params, null, 'application/x-www-form-urlencoded');
         blocked_user.addEventListener('load', () => this.prepareDisplay(blocked_user, "blockedUser"));
     }
 
+    // inserts data into given card
     prepareDisplay(xhr, stateElement) {
         let json = JSON.parse(xhr.responseText);
         if (json.status) {
@@ -85,6 +97,7 @@ export class UserManagement extends React.Component {
         }
     }
 
+    // animates card open and close
     toggleCardUser = (id, name) => {
         let card = document.getElementById(id);
         if (!this.state[name]) {

@@ -2,6 +2,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBan, faCheck} from "@fortawesome/free-solid-svg-icons";
 import {UserAction} from "./APIActions";
 
+// renders the HTML by a list of all accepted user
 export function renderAcceptedUser(arr) {
     var list = [];
     for (var i=0; i<arr.length; i++) {
@@ -22,6 +23,7 @@ export function renderAcceptedUser(arr) {
     );
 }
 
+// renders the HTML by a list of all unaccepted user
 export function renderUnacceptedUser(arr) {
     var list = [];
     for (var i=0; i<arr.length; i++) {
@@ -45,6 +47,7 @@ export function renderUnacceptedUser(arr) {
     );
 }
 
+// renders the HTML by a list of all blocked user
 export function renderBlockedUser(arr) {
     var list = [];
     for (var i=0; i<arr.length; i++) {

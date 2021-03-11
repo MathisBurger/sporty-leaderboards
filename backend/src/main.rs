@@ -9,6 +9,7 @@ mod dotenv_handler;
 mod database;
 mod hashing;
 mod token;
+mod Bubblesort;
 
 // main function for webserver
 #[actix_web::main]
@@ -37,6 +38,7 @@ async fn main() -> std::io::Result<()> {
             .route("/accept_user", web::patch().to(controller::accept_user_controller::response))
             .route("/block_user", web::patch().to(controller::block_user_controller::response))
             .route("/add_workout", web::post().to(controller::add_workout_controller::response))
+            .route("/get_leaderboard", web::get().to(controller::get_leaderboard_controller::response))
     })
         .bind("0.0.0.0:".to_owned() + &dotenv_handler::load_param("APPLICATION_PORT"))?
         .run()

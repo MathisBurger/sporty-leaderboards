@@ -5,6 +5,9 @@ use crate::controller::register_controller::RegisterRequest;
 use crate::database::actions;
 use crate::controller::login_controller::LoginRequest;
 use crate::database::models::user_model::OutputUserModel;
+use std::iter::Map;
+use std::collections::HashMap;
+
 
 pub struct DatabaseService {
     connection_string: String,
@@ -62,5 +65,19 @@ impl DatabaseService {
 
     pub async fn add_workout(&self, username: &String, time: &i64, distance: &i32) {
         actions::add_workout::add_workout(self, username, time, distance).await;
+    }
+
+    pub async fn get_leaderboard(&self) -> Vec<(String, f64)> {
+        let mut scores: Vec<(String, f64)> = vec![];
+        let user = self.get_all_accepted_user().await;
+        for usr in user {
+            let mut score: f64 = 0.0;
+            let workouts = actions::get_all_workouts::get_all_workouts_of_user(self, &usr.username).await;
+            for workout in workouts {
+                score += (((workout.distance * workout.time) / 1000000) as f64).ceil();
+            }
+            scores.push((usr.username, score));
+        }
+        return crate::Bubblesort::bubblesort(scores);
     }
 }

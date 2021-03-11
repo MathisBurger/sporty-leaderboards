@@ -6,13 +6,16 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHome, faUser, faSignOutAlt} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
 
+// Sidebar as component
 export class SidebarComponent extends React.Component {
 
+    // binding logout function
     constructor(props) {
         super(props);
         this.logout = this.logout.bind(this)
     }
 
+    // rendering html
     render() {
         return (
             <div className={"sidebar"}>
@@ -38,9 +41,12 @@ export class SidebarComponent extends React.Component {
         );
     }
 
+    // toggles visibility of sidebar
     toggleNavbar() {
         let container = document.getElementById('sidebar-container');
         let left = container.offsetLeft;
+
+        // checks if sidebar is shown
         if (left === 0) {
             container.style.animationName = "SlideOut";
             container.style.animationFillMode = "forwards";
@@ -52,6 +58,7 @@ export class SidebarComponent extends React.Component {
         }
     }
 
+    // logout the user
     logout = () =>  {
         cookie.remove('username');
         cookie.remove('token');

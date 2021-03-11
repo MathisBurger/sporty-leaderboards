@@ -14,6 +14,7 @@ export class LoginWindow extends React.Component {
     };
 
 
+    // sets the username as state value
     handleUsername = event => {
         this.setState((state) => {
             return {
@@ -23,6 +24,7 @@ export class LoginWindow extends React.Component {
         });
     };
 
+    // sets the password as state value
     handlePassword = event => {
         this.setState((state) => {
             return {
@@ -32,6 +34,7 @@ export class LoginWindow extends React.Component {
         });
     };
 
+    // renders the component
     render() {
         return (
           <div className="card">
@@ -48,22 +51,30 @@ export class LoginWindow extends React.Component {
         );
     }
 
+    // onclick function for the login
     login = () => {
+
+        // defines JSON array
         const json = JSON.stringify({
             username: this.state.username,
             password: this.state.password,
             login_device: "web"
         });
+
         let xhr = getXHRConnection('POST', '/login', json, 'application/json');
         xhr.addEventListener('load', () => {
             let data = JSON.parse(xhr.responseText);
             if (data.status === true) {
+                // set token
                 let d = new Date();
                 d.setTime(d.getTime() + (48*3600*1000));
                 cookie.save("username", this.state.username, {path: "/", expires: d});
                 cookie.save("token", data.token, {path: "/", expires: d});
+
+                // open dashboard
                 this.props.history.push('/dashboard');
             } else {
+                // renders alert if login failed
                 ReactDOM.render(<Snackbar render={true} message={data.message} color={"#CB1212"}/>, document.getElementById('snackbar'));
                 setTimeout(() => {
                     ReactDOM.render(null, document.getElementById('snackbar'));

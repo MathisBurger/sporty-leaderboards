@@ -12,6 +12,7 @@ export class RegisterWindow extends React.Component {
         password: ""
     };
 
+    // sets the username as state value
     handleUsername = event => {
         this.setState((state) => {
             return {
@@ -21,6 +22,7 @@ export class RegisterWindow extends React.Component {
         });
     };
 
+    // sets the password as state value
     handlePassword = event => {
         this.setState((state) => {
             return {
@@ -30,6 +32,7 @@ export class RegisterWindow extends React.Component {
         });
     };
 
+    // renders component
     render() {
         return (
             <div>
@@ -48,20 +51,27 @@ export class RegisterWindow extends React.Component {
         );
     }
 
+    // onclick function for registration
     register = () => {
-        console.log('lights');
+
+        // defines JSON array
         const json = JSON.stringify({
             username: this.state.username,
             password: this.state.password
         });
 
+        // queries API
         let xhr = getXHRConnection('POST', '/register', json, 'application/json');
         xhr.addEventListener('load', () => {
+
             const data = JSON.parse(xhr.responseText);
+
             if (data.status) {
-                this.props.history.push('login');
+                // opens login page
+                this.props.history.push('/login');
             } else {
-                console.log('break the rules');
+
+                // renders error alert
                 ReactDOM.render(<Snackbar render={true} message={data.message} color={"#CB1212"}/>, document.getElementById('snackbar'));
                 setTimeout(() => {
                     ReactDOM.render(null, document.getElementById('snackbar'));

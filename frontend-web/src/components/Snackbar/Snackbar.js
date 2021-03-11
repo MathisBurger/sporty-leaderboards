@@ -3,6 +3,7 @@ import './Snackbar.css';
 
 export class Snackbar extends React.Component {
 
+    // defined states by props
     constructor(props) {
         super(props);
         this.state = {
@@ -11,6 +12,8 @@ export class Snackbar extends React.Component {
             message: props.message
         };
     }
+
+    // render component
     render() {
         if (this.state.render) {
             return (

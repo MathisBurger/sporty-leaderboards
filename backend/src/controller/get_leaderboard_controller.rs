@@ -23,7 +23,7 @@ pub async fn response(req: web::Query<Request>) -> impl Responder {
         db.close().await;
         web::HttpResponse::Ok()
             .json(Response {
-                status: false,
+                status: true,
                 message: "Successfully queried leaderoard".to_string(),
                 leaderboard
             })

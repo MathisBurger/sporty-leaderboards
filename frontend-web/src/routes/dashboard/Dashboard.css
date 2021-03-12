@@ -1,0 +1,62 @@
+.dashboard-leaderboard-card {
+    min-width: 50%;
+    min-height: 30%;
+    max-height: 95%;
+    background-color: #2B2B2B;
+    border-radius: 15px;
+}
+
+#tbl {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tbl td, #tbl th {
+    border: 1px solid #323131;
+    padding: 8px;
+    color: white;
+    font-size: 1.4em;
+}
+
+
+#tbl tr:hover {background-color: #5b5b5b;}
+
+
+.card-row {
+    display: flex;
+    flex-direction: row;
+    min-height: 40%;
+    min-width: 100%;
+}
+
+.card-column {
+    display: flex;
+    flex-direction: column;
+    min-height: 40%;
+    min-width: 50%;
+}
+
+.dashboard-workout-card {
+    min-width: 40%;
+    min-height: 60%;
+    background-color: #2B2B2B;
+    margin-left: 2em;
+    border-radius: 15px;
+}
+
+.dashboard-graph-card {
+    margin-top: 1em;
+    min-width: 40%;
+    min-height: 25%;
+    max-height: 25%;
+    background-color: #2B2B2B;
+    margin-left: 2em;
+    border-radius: 15px;
+    overflow: hidden;
+}
+canvas {
+    max-width: 100%;
+    max-height: 100%;
+}
+

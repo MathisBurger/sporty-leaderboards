@@ -12,12 +12,13 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="added get_leaderboard_controller.rs endpoint">
-      <change afterPath="$PROJECT_DIR$/src/controller/get_all_workouts_of_user_controller.rs" afterDir="false" />
+    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="added get_all_workouts_of_user_controller.rs endpoint">
+      <change afterPath="$PROJECT_DIR$/../frontend-web/src/routes/dashboard/ChartComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend-web/src/routes/dashboard/Dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/get_leaderboard_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/get_leaderboard_controller.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/database_service.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/database_service.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-web/src/routes/dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/routes/dashboard/Dashboard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,9 +69,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
@@ -127,7 +128,8 @@
       <workItem from="1615399092859" duration="5317000" />
       <workItem from="1615443898445" duration="3264000" />
       <workItem from="1615465606899" duration="5087000" />
-      <workItem from="1615482790623" duration="5674000" />
+      <workItem from="1615482790623" duration="6407000" />
+      <workItem from="1615530068438" duration="2652000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1614882898460</created>
@@ -269,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615495738391</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="added get_all_workouts_of_user_controller.rs endpoint">
+      <created>1615496335420</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1615496335420</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,6 +320,7 @@
     <MESSAGE value="added add_workout_controller.rs endpoint" />
     <MESSAGE value="checked connection is beeing closed" />
     <MESSAGE value="added get_leaderboard_controller.rs endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="added get_leaderboard_controller.rs endpoint" />
+    <MESSAGE value="added get_all_workouts_of_user_controller.rs endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="added get_all_workouts_of_user_controller.rs endpoint" />
   </component>
 </project>

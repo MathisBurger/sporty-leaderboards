@@ -4,7 +4,6 @@
     max-height: 83%;
     background-color: #2B2B2B;
     border-radius: 15px;
-    margin-bottom: 1em;
 }
 
 #tbl {
@@ -29,7 +28,6 @@
     flex-direction: row;
     min-height: 40%;
     min-width: 100%;
-    flex-wrap: wrap;
 }
 
 .card-column {
@@ -65,10 +63,16 @@ canvas {
 }
 
 @media only screen and (max-width: 680px) {
+    .card-row {
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+    }
     .dashboard-workout-card {
-        margin-right: 10%;
+        margin-top: 1em;
         margin-left: 0;
-        overflow: scroll;
+        margin-right: 5%;
+        overflow-x: scroll;
     }
     .dashboard-graph-card {
         display: none;

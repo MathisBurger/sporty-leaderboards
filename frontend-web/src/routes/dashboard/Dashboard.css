@@ -1,7 +1,7 @@
 .dashboard-leaderboard-card {
     min-width: 50%;
     min-height: 30%;
-    max-height: 95%;
+    max-height: 83%;
     background-color: #2B2B2B;
     border-radius: 15px;
 }
@@ -39,10 +39,12 @@
 
 .dashboard-workout-card {
     min-width: 40%;
-    min-height: 60%;
+    min-height: 55%;
+    max-height: 55%;
     background-color: #2B2B2B;
     margin-left: 2em;
     border-radius: 15px;
+    overflow: hidden;
 }
 
 .dashboard-graph-card {

@@ -13,11 +13,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="added get_all_workouts_of_user_controller.rs endpoint">
-      <change afterPath="$PROJECT_DIR$/../frontend-web/src/routes/dashboard/ChartComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend-web/src/routes/dashboard/Dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/get_leaderboard_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/get_leaderboard_controller.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend-web/src/utils/Round.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-web/src/routes/dashboard/ChartComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/routes/dashboard/ChartComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-web/src/routes/dashboard/Dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/routes/dashboard/Dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend-web/src/routes/dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/routes/dashboard/Dashboard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +127,7 @@
       <workItem from="1615443898445" duration="3264000" />
       <workItem from="1615465606899" duration="5087000" />
       <workItem from="1615482790623" duration="6407000" />
-      <workItem from="1615530068438" duration="2652000" />
+      <workItem from="1615530068438" duration="2655000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1614882898460</created>

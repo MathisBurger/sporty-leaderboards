@@ -3,8 +3,9 @@ import {SidebarComponent} from "../../components/Sidebar/Sidebar";
 import {checkAPICredentials} from "../../utils/CheckCreds";
 import './Dashboard.css';
 import {getXHRConnection} from "../../utils/XHR";
+import {round} from "../../utils/Round";
 import cookie from "react-cookies";
-import {ChartComponent} from "./ChartComponent";
+import * as Chart from "chart.js";
 
 export class Dashboard extends React.Component {
 
@@ -38,8 +39,8 @@ export class Dashboard extends React.Component {
                                     {this.renderWorkouts()}
                                 </div>
                                 <div className={"dashboard-graph-card"}>
-                                    {console.log("next", this.state.workouts)}
-                                    <ChartComponent data={this.state.workouts} />
+                                    {console.log("asdasd", this.state.workouts)}
+                                    <canvas id={"dashboard-chart"} />
                                 </div>
                             </div>
                         </div>
@@ -71,6 +72,31 @@ export class Dashboard extends React.Component {
         workouts.addEventListener('load', () => {
             let data = JSON.parse(workouts.responseText);
             if (data.status) {
+                let chartData = [];
+                let lables = [];
+                for (let i=0; i<data.workouts.length; i++) {
+                    chartData.push(data.workouts[i].distance);
+                    lables.push(new Date(data.workouts[i].timestamp * 1000).toDateString());
+                }
+                new Chart(document.getElementById('dashboard-chart'), {
+                    type: 'line',
+                    data: {
+                        datasets: [
+                            {
+                                borderColor: ['rgba(12, 96, 39, 1)'],
+                                backgroundColor: ['rgba(12, 96, 39, 0.2)'],
+                                data: chartData.reverse()
+                            }
+                        ],
+                        labels: lables
+                    },
+                    options: {
+                        legend: {
+                            display: false
+                        },
+                        responsive: true
+                    }
+                });
                 this.setState({
                     leaderboard: this.state.leaderboard,
                     workouts: data.workouts.reverse()
@@ -111,8 +137,8 @@ export class Dashboard extends React.Component {
         for (let i=0; i<this.state.workouts.length; i++) {
             list.push(
                 <tr key={i.toString()}>
-                    <td>{this.state.workouts[i].distance}</td>
-                    <td>{this.state.workouts[i].time}</td>
+                    <td>{round(this.state.workouts[i].distance / 1000, 3)}km</td>
+                    <td>{round(this.state.workouts[i].time / 3600, 4)}h</td>
                     <td>{new Date(this.state.workouts[i].timestamp * 1000).toLocaleDateString()}</td>
                 </tr>
             );

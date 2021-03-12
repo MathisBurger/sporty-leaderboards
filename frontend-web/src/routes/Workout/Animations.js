@@ -1,5 +1,5 @@
 
-
+// switches color and text of button
 export function SwitchColorAndText() {
     let button = document.getElementById('workout-start-button');
     let color = window.getComputedStyle(button, null).getPropertyValue('background-color');

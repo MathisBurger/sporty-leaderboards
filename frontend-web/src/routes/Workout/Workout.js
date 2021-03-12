@@ -13,6 +13,7 @@ import {Snackbar} from "../../components/Snackbar/Snackbar";
 
 export class Workout extends React.Component {
 
+    // set states of component
     constructor(props) {
         super(props);
         this.state = {
@@ -23,11 +24,14 @@ export class Workout extends React.Component {
             workoutFinished: false
         };
     }
+
+    // check login status
     componentDidMount() {
         let login = checkAPICredentials();
         login.addEventListener('load', () => JSON.parse(login.responseText).status ? console.log('login verified') : this.props.history.push('/login'));
     }
 
+    // renders the component
     render() {
         return (
             <div>
@@ -60,12 +64,18 @@ export class Workout extends React.Component {
         );
     }
 
+    // toggle workout running
+    // start and stops the timer
+    // change color of button
     toggleWorkout = () => {
         SwitchColorAndText();
         this.toggleCounter();
     }
 
+    // saves the workout
     saveWorkout() {
+
+        // defines JSON request object
         const json = JSON.stringify({
             username: cookie.load('username'),
             token: cookie.load('token'),
@@ -73,6 +83,8 @@ export class Workout extends React.Component {
             time: this.state.secsRunning,
             distance: +document.getElementById('distance-input').value
         });
+
+        // execute add_workout
         let xhr = getXHRConnection('POST', '/add_workout', json, 'application/json');
         xhr.addEventListener('load', () => {
            let data = JSON.parse(xhr.responseText);
@@ -93,6 +105,7 @@ export class Workout extends React.Component {
         });
     }
 
+    // toggles the counter
     toggleCounter() {
         if (!this.state.timerRunning) {
             let intervalID = setInterval(() => {
@@ -116,6 +129,7 @@ export class Workout extends React.Component {
         }
     }
 
+    // parses seconds to time string
     secsToTimeString() {
         let secs = this.state.secsRunning;
         var hours = Math.floor(secs / (60 * 60));
@@ -129,6 +143,8 @@ export class Workout extends React.Component {
         }</h1>;
     }
 
+    // returns the classList of heart container
+    // depends on state of timer
     getHeartClasses = () => {
         if (this.state.timerRunning) {
             return "heart-container animated-heart-container";

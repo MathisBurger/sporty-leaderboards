@@ -55,8 +55,11 @@ export class Dashboard extends React.Component {
         let xhr = checkAPICredentials();
         xhr.addEventListener('load', () => JSON.parse(xhr.responseText).status ? console.log('login verified') : this.props.history.push('/login'));
 
+        // defines params for get request
         let params = "?username=" + cookie.load('username') + "&token=" + cookie.load('token') + "&device=web";
 
+        // queries the leaderboard data
+        // refresh component
         let leaderboard = getXHRConnection('GET', '/get_leaderboard' + params, null, 'application/x-www-urlencoded');
         leaderboard.addEventListener('load', () => {
             let data = JSON.parse(leaderboard.responseText);
@@ -68,6 +71,8 @@ export class Dashboard extends React.Component {
             }
         });
 
+        // queries the workout data
+        // refresh component
         let workouts = getXHRConnection('GET', '/get_all_workouts_of_user' + params, null, 'application/x-www-urlencoded');
         workouts.addEventListener('load', () => {
             let data = JSON.parse(workouts.responseText);

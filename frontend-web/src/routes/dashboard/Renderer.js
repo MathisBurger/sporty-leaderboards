@@ -1,8 +1,9 @@
 import {round} from "../../utils/Round";
 import React from "react";
 
-
+// renders the workout content
 export function renderWorkouts(workouts) {
+    // generates list of jsx HTML
     let list = [];
     for (let i=0; i<workouts.length; i++) {
         list.push(
@@ -13,6 +14,8 @@ export function renderWorkouts(workouts) {
             </tr>
         );
     }
+
+    // returns table
     return (
         <table id={"tbl"}>
             <thead>
@@ -29,7 +32,9 @@ export function renderWorkouts(workouts) {
     );
 }
 
+// renders the leaderboard content
 export function renderLeaderboard(leaderboard) {
+    // generates list of jsx HTML
     let list = [];
     for (let i=0; i<leaderboard.length; i++) {
         list.push(
@@ -40,6 +45,7 @@ export function renderLeaderboard(leaderboard) {
             </tr>
         );
     }
+    // returns table
     return (
         <table id={"tbl"}>
             <thead>

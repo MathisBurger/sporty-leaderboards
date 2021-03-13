@@ -1,0 +1,6 @@
+backend/target
+backend/.idea
+backend/web
+frontend-web/.idea
+frontend-web/node_modules
+frontend-web/build

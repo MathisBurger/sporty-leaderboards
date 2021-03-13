@@ -1,0 +1,31 @@
+version: '3.1'
+services:
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: sporty-leaderboards
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8080
+
+  backend:
+    depends_on:
+      - "db"
+    links:
+      - "db"
+    image: mathisburger/sporty-leaderboards
+    ports:
+    - "8080:8080"
+    restart: always
+    environment:
+      DATABASE_URL: mysql://root:password@127.0.0.1:3306/sporty-leaderboards
+      RUST_BACKTRACE: full
+      APPLICATION_PORT: 8080
+volumes:
+  db_data: {}

@@ -1,4 +1,4 @@
-use actix_web::{web, Responder, HttpRequest};
+use actix_web::{web, Responder};
 use serde::{Serialize, Deserialize};
 use crate::database::database_service::DatabaseService;
 use crate::database::models::user_model::OutputUserModel;

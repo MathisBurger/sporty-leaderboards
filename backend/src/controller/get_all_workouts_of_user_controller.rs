@@ -1,4 +1,4 @@
-use actix_web::{web, Responder, HttpRequest};
+use actix_web::{web, Responder};
 use serde::{Serialize, Deserialize};
 use crate::database::database_service::DatabaseService;
 use crate::controller::get_all_blocked_user_controller::Request;

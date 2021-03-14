@@ -12,21 +12,8 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="added get_all_workouts_of_user_controller.rs endpoint">
-      <change beforePath="$PROJECT_DIR$/.idea/backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/accept_user_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/accept_user_controller.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/add_workout_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/add_workout_controller.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/block_user_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/block_user_controller.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/check_creds_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/check_creds_controller.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/get_all_accepted_user_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/get_all_accepted_user_controller.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/get_all_blocked_user_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/get_all_blocked_user_controller.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/get_all_unaccepted_user_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/get_all_unaccepted_user_controller.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/get_all_workouts_of_user_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/get_all_workouts_of_user_controller.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/get_leaderboard_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/get_leaderboard_controller.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/login_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/login_controller.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/register_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/register_controller.rs" afterDir="false" />
+    <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="commented database actions">
+      <change beforePath="$PROJECT_DIR$/src/database/database_service.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/database_service.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +123,7 @@
       <workItem from="1615653388819" duration="1816000" />
       <workItem from="1615664528235" duration="2397000" />
       <workItem from="1615667262607" duration="617000" />
-      <workItem from="1615723780206" duration="434000" />
+      <workItem from="1615723780206" duration="860000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1614882898460</created>
@@ -285,7 +272,21 @@
       <option name="project" value="LOCAL" />
       <updated>1615496335420</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="commented controller">
+      <created>1615724231043</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1615724231043</updated>
+    </task>
+    <task id="LOCAL-00023" summary="commented database actions">
+      <created>1615724486370</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1615724486370</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +329,8 @@
     <MESSAGE value="checked connection is beeing closed" />
     <MESSAGE value="added get_leaderboard_controller.rs endpoint" />
     <MESSAGE value="added get_all_workouts_of_user_controller.rs endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="added get_all_workouts_of_user_controller.rs endpoint" />
+    <MESSAGE value="commented controller" />
+    <MESSAGE value="commented database actions" />
+    <option name="LAST_COMMIT_MESSAGE" value="commented database actions" />
   </component>
 </project>

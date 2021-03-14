@@ -10,13 +10,17 @@ use std::collections::HashMap;
 use crate::database::models::workout_model::WorkoutModel;
 
 
+// Main struct
 pub struct DatabaseService {
     connection_string: String,
     pub conn: Pool<MySql>
 }
 
+
+// implement functions for struct
 impl DatabaseService {
 
+    // creates a new database service
     pub async fn new() -> DatabaseService {
         return DatabaseService {
             connection_string: dotenv_handler::load_param("DATABASE_URL"),
@@ -25,10 +29,12 @@ impl DatabaseService {
         };
     }
 
+    // closes the connection
     pub async fn close(&self) {
         self.conn.close().await;
     }
 
+    // tries to init the database
     pub async fn install(&self) -> bool {
         let mut counter: i8 = 0;
         if create_user_accounts_table(self).await {counter += 1;}
@@ -36,42 +42,52 @@ impl DatabaseService {
         return counter == 2;
     }
 
+    // register new user
     pub async fn register(&self, req: &RegisterRequest) -> bool {
         return actions::register::register_user(self, req).await;
     }
 
+    // login user
     pub async fn login(&self, req: &LoginRequest) -> (bool, String) {
         return actions::login::login(self, req).await;
     }
 
+    // check token login of user
     pub async fn check_token_login(&self, username: &String, token: &String, device: &String) -> bool {
         return actions::check_token_login::check_token_login(self, username, token, device).await;
     }
 
+    // get all blocked user
     pub async fn get_all_blocked_user(&self) -> Vec<OutputUserModel> {
         return actions::get_all_user_with_status::get_all_user_with_status(self, &2).await;
     }
 
+    // get all unaccepted user
     pub async fn get_all_unaccepted_user(&self) -> Vec<OutputUserModel> {
         return actions::get_all_user_with_status::get_all_user_with_status(self, &0).await;
     }
 
+    // get all accepted user
     pub async fn get_all_accepted_user(&self) -> Vec<OutputUserModel> {
         return actions::get_all_user_with_status::get_all_user_with_status(self, &1).await;
     }
 
+    // update user status
     pub async fn update_user_status(&self, username: &String, status: i16) {
         actions::update_user_status::update_user_status(self, username, &status).await;
     }
 
+    // add a workout
     pub async fn add_workout(&self, username: &String, time: &i64, distance: &i32) {
         actions::add_workout::add_workout(self, username, time, distance).await;
     }
 
+    // get all workouts of user
     pub async fn get_all_workouts_of_user(&self, username: &String) -> Vec<WorkoutModel> {
         return actions::get_all_workouts::get_all_workouts_of_user(self, username).await;
     }
 
+    // calculates the leaderboard
     pub async fn get_leaderboard(&self) -> Vec<(String, f64)> {
         let mut scores: Vec<(String, f64)> = vec![];
         let user = self.get_all_accepted_user().await;

@@ -5,7 +5,7 @@ WORKDIR /webapp
 
 # install frontend
 COPY ./frontend-web .
-RUN npm ci
+RUN npm i
 RUN npm run build
 
 FROM rust:latest as backendBuild

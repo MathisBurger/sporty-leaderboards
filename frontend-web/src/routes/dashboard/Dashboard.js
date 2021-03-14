@@ -39,7 +39,6 @@ export class Dashboard extends React.Component {
                                     {renderWorkouts(this.state.workouts)}
                                 </div>
                                 <div className={"dashboard-graph-card"}>
-                                    {console.log("asdasd", this.state.workouts)}
                                     <canvas id={"dashboard-chart"} />
                                 </div>
                             </div>
@@ -77,7 +76,7 @@ export class Dashboard extends React.Component {
         workouts.addEventListener('load', () => {
             let data = JSON.parse(workouts.responseText);
             if (data.status) {
-                initChart(data.workouts);
+                initChart(data.workouts.reverse());
                 this.setState({
                     leaderboard: this.state.leaderboard,
                     workouts: data.workouts.reverse()

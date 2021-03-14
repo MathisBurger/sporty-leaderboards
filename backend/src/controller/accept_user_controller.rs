@@ -25,6 +25,9 @@ pub async fn response(req: web::Json<Request>) -> impl Responder {
 
     // check login token
     if db.check_token_login(&req.username, &req.token, &req.device).await {
+
+        db.update_user_status(&req.user, 1).await;
+
         db.close().await;
         web::HttpResponse::Ok()
             .json(Response {

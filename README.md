@@ -11,7 +11,7 @@
 <img src="https://img.shields.io/github/license/MathisBurger/sporty-leaderboards?style=for-the-badge">
 </div>
 
----
+<hr>
 
 <div align="center">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" width="150">
@@ -21,14 +21,14 @@
 
 # Idea
 
----
+<hr>
 I had the idea for this project, because I wanted to monitor my own workouts
 and compare them with my friends workout.
 I also wanted to learn new technologies like React and Rust.
 
 # Installation
 
----
+<hr>
 **NOTE: You need docker and docker-compose installed on your machine to run the app**
 
 Now you need to setup your ``docker-compose.yml``. <br>
@@ -94,7 +94,7 @@ docker-compose restart -d
 
 # User setup
 
----
+<hr>
 Now you can try to open ``http://MASCHINE_IP:APPLICATION_PORT`` in your browser.<br>
 It should look like this:
 <div align="center">

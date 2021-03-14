@@ -13,24 +13,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a962713-f30d-44d1-8369-dd5e9c48949c" name="Default Changelist" comment="added get_all_workouts_of_user_controller.rs endpoint">
-      <change afterPath="$PROJECT_DIR$/../.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sqlx-data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/backend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/accept_user_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/accept_user_controller.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/add_workout_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/add_workout_controller.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/block_user_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/block_user_controller.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/check_creds_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/check_creds_controller.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/get_all_accepted_user_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/get_all_accepted_user_controller.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/get_all_blocked_user_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/get_all_blocked_user_controller.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/get_all_unaccepted_user_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/get_all_unaccepted_user_controller.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/get_all_workouts_of_user_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/get_all_workouts_of_user_controller.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/greeting_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/greeting_controller.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/installation/create_tables.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/installation/create_tables.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend-web/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend-web/src/utils/XHR.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-web/src/utils/XHR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/get_leaderboard_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/get_leaderboard_controller.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/login_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/login_controller.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/register_controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/register_controller.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,11 +77,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run --package backend --bin backend" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -145,6 +136,7 @@
       <workItem from="1615653388819" duration="1816000" />
       <workItem from="1615664528235" duration="2397000" />
       <workItem from="1615667262607" duration="617000" />
+      <workItem from="1615723780206" duration="434000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1614882898460</created>

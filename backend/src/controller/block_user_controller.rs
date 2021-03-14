@@ -17,9 +17,16 @@ struct Response {
 }
 
 pub async fn response(req: web::Json<Request>) -> impl Responder {
+
     let db = DatabaseService::new().await;
+
+    // check login token
     if db.check_token_login(&req.username, &req.token, &req.device).await {
+
+        // block user
         db.update_user_status(&req.user, 2).await;
+
+        db.close().await;
         web::HttpResponse::Ok()
             .json(Response {
                 status: true,

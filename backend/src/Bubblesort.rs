@@ -1,5 +1,7 @@
 use std::collections::HashMap;
 
+
+// implementation of the bubblesort algorithm
 pub fn bubblesort(mut arr: Vec<(String, f64)>) -> Vec<(String, f64)>{
     for i in 0..arr.len() {
         for j in 0..arr.len() - 1 {

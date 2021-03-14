@@ -19,7 +19,10 @@ mod Bubblesort;
 // main function for webserver
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
+    // init env handling
     dotenv().ok();
+
+    // creates database tables if not existing
     let db = database::database_service::DatabaseService::new().await;
     if db.install().await {
         println!("Successfully initialized database");

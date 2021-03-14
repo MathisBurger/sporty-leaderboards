@@ -10,6 +10,7 @@
 <img src="https://img.shields.io/docker/pulls/mathisburger/sporty-leaderboards?style=for-the-badge">
 <img src="https://img.shields.io/github/license/MathisBurger/sporty-leaderboards?style=for-the-badge">
 </div>
+
 ---
 
 <div align="center">

@@ -28,12 +28,12 @@ class _BaseApp extends State<BaseApp> {
     }
     return Scaffold(
       appBar: getAppbar(),
-      body: Center(
-        child: Container(
+      body: Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
           color: Color.fromRGBO(62, 62, 62, 1.0),
           child: content,
         ),
-      ),
       bottomNavigationBar: Container(
         color: Color.fromRGBO(62, 62, 62, 1.0),
         child: Container(

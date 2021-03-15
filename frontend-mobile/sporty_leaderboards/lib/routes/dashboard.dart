@@ -7,7 +7,9 @@ class DashboardRoute extends StatefulWidget {
 class _DashboardRoute extends State<DashboardRoute> {
   @override
   Widget build(BuildContext context) {
-      return Container();
+      return Container(
+        child: Text("Montag"),
+      );
   }
 
 }

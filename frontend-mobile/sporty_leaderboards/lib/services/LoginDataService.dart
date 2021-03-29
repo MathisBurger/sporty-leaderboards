@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:path_provider/path_provider.dart';
 import 'dart:io';
 
+import 'package:sporty_leaderboards/services/RestService.dart';
+
 class LoginDataService {
 
   Future<bool> getLoginStatus() async {
@@ -12,7 +14,7 @@ class LoginDataService {
       return false;
     }
     var content = json.decode(raw);
-
+    return await RestService(content).checkStatus();
   }
 
   Future<String> get _localPath async {

@@ -3,6 +3,7 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:sporty_leaderboards/routes/dashboard.dart';
 import 'package:sporty_leaderboards/routes/workout.dart';
+import 'package:sporty_leaderboards/services/LoginDataService.dart';
 
 import 'appbar.dart';
 
@@ -26,63 +27,77 @@ class _BaseApp extends State<BaseApp> {
         content = new WorkoutRoute();
         break;
     }
-    return Scaffold(
-      appBar: getAppbar(),
-      body: Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          color: Color.fromRGBO(62, 62, 62, 1.0),
-          child: content,
-        ),
-      bottomNavigationBar: Container(
-        color: Color.fromRGBO(62, 62, 62, 1.0),
-        child: Container(
-          margin: EdgeInsets.all(10),
-          decoration: BoxDecoration(color: Colors.white, boxShadow: [
-            BoxShadow(blurRadius: 20, color: Colors.black.withOpacity(.1))
-          ],
-              borderRadius: BorderRadius.all(Radius.circular(30.0)),
-              shape: BoxShape.rectangle
-          ),
-          child: SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
-              child: GNav(
-                  rippleColor: Colors.grey[300],
-                  hoverColor: Colors.grey[100],
-                  gap: 8,
-                  activeColor: Color.fromRGBO(
-                      0, 55, 255, 1),
-                  iconSize: 24,
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-                  duration: Duration(milliseconds: 400),
-                  tabBackgroundColor: Color.fromRGBO(
-                      43, 87, 250, 0.5019607843137255),
-                  tabs: [
-                    GButton(
-                      icon: LineIcons.home,
-                      text: 'Dashboard',
-                    ),
-                    GButton(
-                      icon: LineIcons.running,
-                      text: 'Workout',
-                    ),
-                    GButton(
-                      icon: Icons.logout,
-                      text: 'Logout',
-                    ),
+    return FutureBuilder<bool>(
+      future: new LoginDataService().getLoginStatus(),
+      builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
+        if (snapshot.hasData) {
+          if (snapshot.data) {
+            return Scaffold(
+              appBar: getAppbar(),
+              body: Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                color: Color.fromRGBO(62, 62, 62, 1.0),
+                child: content,
+              ),
+              bottomNavigationBar: Container(
+                color: Color.fromRGBO(62, 62, 62, 1.0),
+                child: Container(
+                  margin: EdgeInsets.all(10),
+                  decoration: BoxDecoration(color: Colors.white, boxShadow: [
+                    BoxShadow(blurRadius: 20, color: Colors.black.withOpacity(.1))
                   ],
-                  selectedIndex: _selectedIndex,
-                  onTabChange: (index) {
-                    setState(() {
-                      _selectedIndex = index;
-                    });
-                  }),
-            ),
-          ),
-        ),
-      ),
+                      borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                      shape: BoxShape.rectangle
+                  ),
+                  child: SafeArea(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
+                      child: GNav(
+                          rippleColor: Colors.grey[300],
+                          hoverColor: Colors.grey[100],
+                          gap: 8,
+                          activeColor: Color.fromRGBO(
+                              0, 55, 255, 1),
+                          iconSize: 24,
+                          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                          duration: Duration(milliseconds: 400),
+                          tabBackgroundColor: Color.fromRGBO(
+                              43, 87, 250, 0.5019607843137255),
+                          tabs: [
+                            GButton(
+                              icon: LineIcons.home,
+                              text: 'Dashboard',
+                            ),
+                            GButton(
+                              icon: LineIcons.running,
+                              text: 'Workout',
+                            ),
+                            GButton(
+                              icon: Icons.logout,
+                              text: 'Logout',
+                            ),
+                          ],
+                          selectedIndex: _selectedIndex,
+                          onTabChange: (index) {
+                            setState(() {
+                              _selectedIndex = index;
+                            });
+                          }),
+                    ),
+                  ),
+                ),
+              ),
+            );
+          } else {
+            return Text("Login failed");
+          }
+        } else {
+          return Text("sajkdhsakdhskajhdkasjhdkjashdkjashd");
+        }
+      },
     );
+
   }
 
 }
